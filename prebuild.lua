@@ -8,7 +8,8 @@ workspace "Ferret"
     }
 
 external "Ferret"
-external "FerretApp"
+external "Possum"
+external "PossumApp"
 
 external "vendor/glfw"
 external "vendor/glad"

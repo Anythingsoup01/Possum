@@ -1,4 +1,4 @@
-project "FerretApp"
+project "PossumApp"
     language "C++"
     dialect "17"
     kind "ConsoleApp"
@@ -12,16 +12,19 @@ project "FerretApp"
     includedirs
     {
         "$(WORKSPACEDIR)/Ferret/src",
+        "$(WORKSPACEDIR)/Possum/src",
         "$(WORKSPACEDIR)/vendor/glfw/include",
         "$(WORKSPACEDIR)/vendor/glad/include",
         "$(WORKSPACEDIR)/vendor/spdlog/include",
         "$(WORKSPACEDIR)/vendor/glm",
         "$(WORKSPACEDIR)/vendor/imgui",
+        "$(WORKSPACEDIR)/vendor/ImGuiFileDialog",
     }
 
     links
     {
         "Ferret",
+        "Possum",
     }
 
     filter "configurations:Debug"
