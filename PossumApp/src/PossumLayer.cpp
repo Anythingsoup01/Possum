@@ -4,10 +4,7 @@
 #include "imgui.h"
 
 #include "Possum/Core/Utils.h"
-
-#define MegaByte 1000000
-
-static size_t s_MaxFileSize = (sizeof(char) * MegaByte) * 10;
+#include "Possum/Core/Core.h"
 
 namespace Ferret
 {
@@ -64,6 +61,7 @@ namespace Ferret
                         if (ImGui::InputTextMultiline("##", fileData.Buf.GetData(), s_MaxFileSize, size, ImGuiInputTextFlags_AllowTabInput))
                         {
                             m_OpenedFiles.at(key) = fileData.Buf.GetData();
+                            fileData.Buf.ShouldResize();
                         }
                         ImGui::EndTabItem();
                     }

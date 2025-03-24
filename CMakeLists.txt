@@ -1,6 +1,13 @@
 cmake_minimum_required(VERSION 3.30.0)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 project(Ferret LANGUAGES C CXX)
+
+set(CMAKE_CXX_FLAGS_DEBUG "-O0")
+set(CMAKE_C_FLAGS_DEBUG "-O0")
+
+set(CMAKE_CXX_FLAGS_RELEASE "-O2")
+set(CMAKE_C_FLAGS_RELEASE "-O2")
+
 add_subdirectory(vendor/ImGuiFileDialog)
 add_subdirectory(vendor/prebuild)
 add_subdirectory(vendor/stb)

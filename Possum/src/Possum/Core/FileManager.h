@@ -7,6 +7,7 @@
 #include <imgui.h>
 
 #include "Buffer.h"
+#include "Possum/Core/Core.h"
 
 namespace Possum
 {
@@ -22,9 +23,9 @@ namespace Possum
         bool IsOpen = false;
 
         std::string Content;
-        Buffer Buf = Buffer(10);
+        Buffer Buf = Buffer(s_MaxFileSize);
 
-        ImGuiTabBarFlags Flag = ImGuiTabItemFlags_None;
+        ImGuiTabItemFlags Flag = ImGuiTabItemFlags_None;
     };
 
     class FileManager
