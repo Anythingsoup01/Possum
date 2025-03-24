@@ -58,12 +58,8 @@ target_link_libraries(Ferret
     Glad
     GL
     ImGui
+    ImGuiFileDialog
     stb
-)
-
-target_compile_definitions(Ferret PUBLIC
-    FE_RENDERER_OPENGL
-    GLFW_INCLUDE_NONE
 )
 
 if(CMAKE_BUILD_TYPE STREQUAL Debug)

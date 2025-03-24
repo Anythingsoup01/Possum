@@ -28,7 +28,8 @@ project "Ferret"
         "Glad",
         "GL",
         "ImGui",
-        "stb"
+        "ImGuiFileDialog",
+        "stb",
     }
 
     defines
